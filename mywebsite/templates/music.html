@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>music recommendation of the day<h2>
+  <h4 id="date"></h4>
+
+  <script>
+  var d = new Date();
+  document.getElementById("date").innerHTML = d;
+  </script>
+
+  <br>
+
+  <h3>Kiss Me Thru the Phone by Soulja Boy Tell 'Em</h3>
+{% endblock %}
