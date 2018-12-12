@@ -2,7 +2,7 @@
 # for exiting the window we create
 import pygame, sys
 import screens
-from screens import titleScreen, playScreen
+from screens import titleScreen, playScreen, endScreen, creditScreen
 
 # import some useful constants
 from pygame.locals import *
@@ -18,12 +18,9 @@ screenCounter = 0
 # show title screen at game start
 titleScreen()
 
-# update display every run through, will slow down framrate if always updating
-# so I placed all drawing before checking for quit
-# pygame.display.update()
-
 # will always loop
 while True:
+    #update screen
     pygame.display.update()
     # get all user events
     for event in pygame.event.get():
@@ -33,11 +30,13 @@ while True:
             sys.exit()
         # debug if mousepress change screen
         elif event.type == pygame.MOUSEBUTTONDOWN:
+            # if mouse pressed and still running through list then change to next screen
             if screenCounter < len(screenList)-1:
                 screenCounter += 1
                 moveScreen = getattr(screens, screenList[screenCounter])
                 moveScreen()
                 print(screenList[screenCounter])
+            # if mouse pressed and done with list go back to beginning of game
             else:
                 screenCounter = 0
                 moveScreen = getattr(screens, screenList[screenCounter])
