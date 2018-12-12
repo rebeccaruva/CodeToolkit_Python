@@ -10,3 +10,8 @@ def textToScreen(screen, text, x, y, size = 50,
     except Exception as e:
         print ('Font Error TT')
         raise e
+
+# def loadBG(name):
+#     bgImage = pygame.image.load('data/sprites/' + name)
+#     bgImage = pygame.transform.scale(bgImage, (screenWidth, screenHeight))
+#     return bgImage
