@@ -1,0 +1,13 @@
+what is working:
+
+- run "python ShhASMRGame.py" on command line to click through scenes in pygame
+((must pip install pygame))
+
+- run "python micInputPractice.py" on command line to see mini speech to text -from
+google speech recognizer- guessing game working
+((must pip install pyaudio))
+
+-run "python speech-to-text.py" on command line to see IBM speech to text 
+recognizer working with keyword recognition. (must stop recording with
+ctrl+C before results are printed)
+((must pip install pyaudio))
